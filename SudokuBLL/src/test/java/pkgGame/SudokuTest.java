@@ -147,6 +147,7 @@ public class SudokuTest {
 		Sudoku s1 = null;
 		int iPuzzleSize = 9;	
 		eGameDifficulty eGD = eGameDifficulty.EASY;
+		
 		try {
 			Class<?> c = Class.forName("pkgGame.Sudoku");
 			Constructor constructor = c.getConstructor(new Class[] { int.class, eGameDifficulty.class });
@@ -170,24 +171,31 @@ public class SudokuTest {
 			eGD=eGameDifficulty.HARD;
 			assertEquals(eGD, neweGD);
 		}
+		
 		catch (ClassNotFoundException e1) {
 			System.out.println("Classnotfoundexception");
 			fail("ClassNotFoundException");
+			
 		} catch (NoSuchMethodException e) {
 			System.out.println("NoSuchmethodException");
 			fail("NoSuchMethodException");
+			
 		} catch (SecurityException e) {
 			System.out.println("Securityexception");
 			fail("SecurityException");
+			
 		} catch (InstantiationException e) {
 			System.out.println("Instantiationexception");
 			fail("InstantiationException");
+			
 		} catch (IllegalAccessException e) {
 			System.out.println("IllegalAccessexception");
 			fail("IllegalAccessException");
+			
 		} catch (IllegalArgumentException e) {
 			System.out.println("IllegalArgumentexception");
 			fail("IllegalArgumentException");
+			
 		} catch (InvocationTargetException e) {
 			System.out.println("InvocationTargetexception");
 			fail("InvocationTargetException, Invalid size");
